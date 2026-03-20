@@ -1,0 +1,39 @@
+"""Abstract base for graph backends."""
+
+from __future__ import annotations
+
+from abc import ABC, abstractmethod
+from typing import TYPE_CHECKING, Iterator
+
+if TYPE_CHECKING:
+    from philgraph.schema import Edge, EdgeType, NodeBase
+
+
+class GraphBackend(ABC):
+    @abstractmethod
+    def add_node(self, node: NodeBase) -> None: ...
+    @abstractmethod
+    def get_node(self, uid: str) -> NodeBase | None: ...
+    @abstractmethod
+    def remove_node(self, uid: str) -> None: ...
+    @abstractmethod
+    def iter_nodes(self, node_type: str | None = None) -> Iterator[tuple[str, NodeBase]]: ...
+    @abstractmethod
+    def add_edge(self, edge: Edge) -> None: ...
+    @abstractmethod
+    def get_edges(self, source_uid: str | None = None,
+                  target_uid: str | None = None,
+                  edge_type: EdgeType | None = None) -> list[Edge]: ...
+    @abstractmethod
+    def remove_edge(self, source_uid: str, target_uid: str, edge_type: EdgeType) -> None: ...
+    @abstractmethod
+    def neighbors(self, uid: str, direction: str = "both",
+                  edge_types: list[EdgeType] | None = None) -> list[str]: ...
+    @abstractmethod
+    def node_count(self) -> int: ...
+    @abstractmethod
+    def edge_count(self) -> int: ...
+    @abstractmethod
+    def subgraph(self, uids: set[str]) -> GraphBackend: ...
+    @abstractmethod
+    def clear(self) -> None: ...

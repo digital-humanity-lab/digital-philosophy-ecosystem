@@ -1,0 +1,23 @@
+[project]
+name = "philgraph"
+version = "0.1.0"
+description = "Philosophical knowledge graph builder and query engine"
+requires-python = ">=3.11"
+dependencies = [
+    "networkx>=3.0",
+    "pyyaml>=6.0",
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+rdf = ["rdflib>=7.0", "SPARQLWrapper>=2.0"]
+viz = ["pyvis>=0.3", "matplotlib>=3.8"]
+resolve = ["rapidfuzz>=3.0"]
+all = ["philgraph[rdf,viz,resolve]"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/philgraph"]

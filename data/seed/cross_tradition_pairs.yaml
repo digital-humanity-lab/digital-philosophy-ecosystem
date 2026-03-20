@@ -1,0 +1,368 @@
+# Cross-Tradition Concept Pairs - Ground Truth for philmap validation
+# Based on published comparative philosophy literature
+# Each pair has scholarly citation and expected similarity range
+
+positive_pairs:
+  - id: pair_01
+    concept_a:
+      id: watsuji.aidagara
+      term_ja: 間柄
+      term_en: aidagara (betweenness)
+      tradition: Kyoto School
+      definition_ja: "人間存在の根本構造としての、人と人との間の関係性。個人は間柄を通じてのみ自己を実現する。"
+      definition_en: "The relational space between persons that constitutes their individuality — neither isolated individual nor undifferentiated collectivity."
+      source_texts: ["和辻哲郎『倫理学』(1937-1949)"]
+      usage_contexts:
+        - "和辻は「人間」の語源（人の間）から、存在が本質的に関係的であることを論じた"
+        - "間柄は倫理の基盤であり、空間的・社会的な「あいだ」を含む"
+    concept_b:
+      id: buber.i_thou
+      term_de: Ich-Du
+      term_en: I-Thou
+      tradition: Western Relational Ontology
+      definition_de: "Die Grundbeziehung, in der das Gegenüber als ganzes Wesen begegnet wird."
+      definition_en: "A mode of relating in which the other is encountered as a whole being, not as an object. The I-Thou relation is mutual, direct, and constitutive of genuine selfhood."
+      source_texts: ["Martin Buber, I and Thou (1923)"]
+    concept_c:
+      id: ubuntu.ubuntu
+      term_zu: ubuntu
+      term_en: ubuntu (humaneness)
+      tradition: Ubuntu Philosophy
+      definition_en: "A person is a person through other persons. Communal interdependence as the ground of personhood."
+    scholarly_basis: "Carter 2001; Metz 2007; relational selfhood across traditions"
+    expected_similarity: ">0.7"
+
+  - id: pair_02
+    concept_a:
+      id: nishida.zettaimu
+      term_ja: 絶対無
+      term_en: absolute nothingness
+      tradition: Kyoto School
+      definition_ja: "あらゆる有を包み、自らは対象化されない究極の場所。主客未分の根源的な場。"
+      definition_en: "The ultimate place that envelops all being without itself being determined. The ground prior to subject-object division."
+      source_texts: ["西田幾多郎『場所』(1926)", "西田幾多郎『無の自覚的限定』(1932)"]
+    concept_b:
+      id: heidegger.nichts
+      term_de: das Nichts
+      term_en: the Nothing
+      tradition: Continental Phenomenology
+      definition_de: "Das Nichts ist nicht das Gegenteil des Seienden, sondern gehört ursprünglich zum Wesen selbst."
+      definition_en: "The Nothing is not the opposite of beings but belongs originally to the essence of Being itself."
+      source_texts: ["Martin Heidegger, 'Was ist Metaphysik?' (1929)"]
+    concept_c:
+      id: nagarjuna.sunyata
+      term_sa: śūnyatā
+      term_en: emptiness
+      tradition: Buddhism (Madhyamaka)
+      definition_en: "The emptiness of inherent existence. All phenomena arise dependently and lack self-nature (svabhāva)."
+      source_texts: ["Nagarjuna, Mūlamadhyamakakārikā (c. 150 CE)"]
+    scholarly_basis: "Nishitani 1982; Parkes 1987; Priest 2002"
+    expected_similarity: ">0.7"
+
+  - id: pair_03
+    concept_a:
+      id: confucius.ren
+      term_zh: 仁
+      term_en: ren (benevolence/humaneness)
+      tradition: Confucianism
+      definition_zh: "人与人之间的仁爱之德，是儒家伦理的核心概念。仁者爱人，推己及人。"
+      definition_en: "The central virtue of Confucian ethics: benevolence, humaneness, or consummate goodness."
+      source_texts: ["《论语》", "《孟子》"]
+      usage_contexts:
+        - "克己复礼为仁"
+        - "樊迟问仁。子曰：爱人。"
+    concept_b:
+      id: buddhism.karuna
+      term_sa: karuṇā
+      term_en: compassion
+      tradition: Buddhism
+      definition_en: "Compassion for all sentient beings. Active wish that others be free from suffering."
+      source_texts: ["Pali Canon, Brahmaviharas"]
+    concept_c:
+      id: christianity.agape
+      term_grc: ἀγάπη
+      term_en: agape (selfless love)
+      tradition: Christianity
+      definition_en: "Unconditional, self-giving love directed toward all, including enemies."
+    scholarly_basis: "Yearley 1990; compassion as cross-cultural virtue"
+    expected_similarity: "0.6-0.8"
+
+  - id: pair_04
+    concept_a:
+      id: laozi.dao
+      term_zh: 道
+      term_en: dao (the Way)
+      tradition: Daoism
+      definition_zh: "天地万物的本源和规律。道可道，非常道。"
+      definition_en: "The source and pattern of all things. The Way that can be spoken of is not the constant Way."
+      source_texts: ["《道德经》"]
+    concept_b:
+      id: heraclitus.logos
+      term_grc: λόγος
+      term_en: logos (reason/order)
+      tradition: Presocratic
+      definition_en: "The rational principle governing the cosmos. The underlying order of all things."
+    concept_c:
+      id: vedic.rta
+      term_sa: ṛta
+      term_en: cosmic order
+      tradition: Vedic
+      definition_en: "The cosmic order or truth that governs both the natural and moral realms."
+    scholarly_basis: "Mou 2001; cosmic order across traditions"
+    expected_similarity: "0.5-0.7"
+
+  - id: pair_05
+    concept_a:
+      id: daoism.wuwei
+      term_zh: 無為
+      term_en: wuwei (non-action)
+      tradition: Daoism
+      definition_zh: "顺应自然而不强为。无为而无不为。"
+      definition_en: "Effortless action aligned with nature. Acting without forcing."
+      source_texts: ["《道德经》", "《庄子》"]
+    concept_b:
+      id: heidegger.gelassenheit
+      term_de: Gelassenheit
+      term_en: releasement/letting-be
+      tradition: Continental Phenomenology
+      definition_de: "Die Gelassenheit zu den Dingen und die Offenheit für das Geheimnis."
+      definition_en: "Releasement toward things and openness to mystery. Letting beings be."
+      source_texts: ["Martin Heidegger, 'Gelassenheit' (1959)"]
+    concept_c:
+      id: sufism.fana
+      term_ar: فناء
+      term_en: fanāʾ (annihilation)
+      tradition: Sufi Philosophy
+      definition_en: "Annihilation of the ego-self in the divine. Cessation of self-will."
+    scholarly_basis: "Izutsu 1983; Parkes 1987; non-action across mystical traditions"
+    expected_similarity: "0.6-0.8"
+
+  - id: pair_06
+    concept_a:
+      id: zhuxi.li
+      term_zh: 理
+      term_en: li (principle)
+      tradition: Neo-Confucianism
+      definition_zh: "天地万物的所以然之理。理在气先。"
+      definition_en: "The principle or pattern inherent in all things. Li precedes qi."
+      source_texts: ["朱熹『近思録』"]
+    concept_b:
+      id: plato.eidos
+      term_grc: εἶδος
+      term_en: Form/Idea
+      tradition: Platonism
+      definition_en: "The eternal, immutable pattern or Form that gives structure to particular things."
+      source_texts: ["Plato, Republic Book VII"]
+    scholarly_basis: "Needham; Neo-Confucian/Greek formal-cause comparison"
+    expected_similarity: "0.5-0.7"
+
+  - id: pair_07
+    concept_a:
+      id: buddhism.dharma
+      term_sa: dharma
+      term_en: dharma (cosmic law/duty)
+      tradition: Buddhism
+      definition_en: "The cosmic law, moral order, and the Buddha's teaching."
+    concept_b:
+      id: aquinas.natural_law
+      term_la: lex naturalis
+      term_en: natural law
+      tradition: Scholasticism
+      definition_en: "The rational creature's participation in eternal law, directing human action toward the good."
+      source_texts: ["Thomas Aquinas, Summa Theologica I-II, Q94"]
+    concept_c:
+      id: vedic.rta_dharma
+      term_sa: ṛta
+      term_en: cosmic order
+      tradition: Vedic
+      definition_en: "The cosmic order governing nature and morality."
+    scholarly_basis: "Olivelle 2009; law/order across traditions"
+    expected_similarity: "0.5-0.7"
+
+  - id: pair_08
+    concept_a:
+      id: nyaya.pramana
+      term_sa: pramāṇa
+      term_en: valid means of knowledge
+      tradition: Nyaya
+      definition_en: "The valid means by which true knowledge is acquired: perception, inference, comparison, testimony."
+      source_texts: ["Nyaya Sutra of Gautama"]
+    concept_b:
+      id: analytic.epistemic_justification
+      term_en: epistemic justification
+      tradition: Analytic Philosophy
+      definition_en: "The property that makes a belief epistemically appropriate. What makes it the case that one is entitled to hold a belief."
+    scholarly_basis: "Matilal 1986; Ganeri 2001; Indian and analytic epistemology"
+    expected_similarity: ">0.7"
+
+  - id: pair_09
+    concept_a:
+      id: hinduism.moksha
+      term_sa: mokṣa
+      term_en: liberation
+      tradition: Vedanta
+      definition_en: "Liberation from the cycle of birth and death (samsara). Realization of one's true nature."
+    concept_b:
+      id: buddhism.nirvana
+      term_sa: nirvāṇa
+      term_en: nirvana (extinction)
+      tradition: Buddhism
+      definition_en: "The cessation of suffering and the cycle of rebirth. Extinguishing of craving, aversion, and delusion."
+    concept_c:
+      id: christianity.salvation
+      term_en: salvation
+      tradition: Christianity
+      definition_en: "Deliverance from sin and its consequences through divine grace."
+    scholarly_basis: "Rambachan 2015; soteriological comparison"
+    expected_similarity: "0.6-0.8"
+
+  - id: pair_10
+    concept_a:
+      id: jainism.ahimsa
+      term_sa: ahiṃsā
+      term_en: non-violence
+      tradition: Jainism
+      definition_en: "Non-harm to any living being in thought, word, and deed. The highest ethical principle."
+    concept_b:
+      id: tolstoy.nonviolence
+      term_en: non-violence (Tolstoy/King)
+      tradition: Western Ethics
+      definition_en: "Principled refusal to use violence, even in resistance to injustice."
+    scholarly_basis: "Direct documented influence via Gandhi; Tolstoy-Gandhi correspondence"
+    expected_similarity: ">0.7"
+
+  - id: pair_11
+    concept_a:
+      id: nishida.basho
+      term_ja: 場所
+      term_en: basho (place/topos)
+      tradition: Kyoto School
+      definition_ja: "あらゆる存在者がそこにおいて成立する場所。意識の底にある主客未分の根源的な場。"
+      definition_en: "The place in which all beings come to be. The ultimate basho is absolute nothingness."
+      source_texts: ["西田幾多郎『場所』(1926)"]
+    concept_b:
+      id: heidegger.lichtung
+      term_de: Lichtung
+      term_en: clearing
+      tradition: Continental Phenomenology
+      definition_de: "Die Lichtung ist der offene Bereich, in dem Seiendes sich zeigen und verbergen kann."
+      definition_en: "The open region in which beings can show themselves and withdraw."
+      source_texts: ["Heidegger, 'Das Ende der Philosophie' (1964)"]
+    concept_c:
+      id: plato.chora
+      term_grc: χώρα
+      term_en: chōra (receptacle)
+      tradition: Platonism
+      definition_en: "The receptacle or space in which Forms are instantiated."
+      source_texts: ["Plato, Timaeus 48e-53c"]
+    scholarly_basis: "Davis 2019; topology of being"
+    expected_similarity: "0.5-0.7"
+
+  - id: pair_12
+    concept_a:
+      id: chinese.qi
+      term_zh: 気
+      term_en: qi (vital force)
+      tradition: Chinese Philosophy
+      definition_zh: "构成天地万物的基本物质和能量。"
+      definition_en: "The vital force or material energy constituting all things."
+    concept_b:
+      id: stoic.pneuma
+      term_grc: πνεῦμα
+      term_en: pneuma (breath/spirit)
+      tradition: Stoicism
+      definition_en: "The vital breath or creative fire pervading all things, giving them cohesion and life."
+    concept_c:
+      id: vedic.prana
+      term_sa: prāṇa
+      term_en: vital breath
+      tradition: Vedic/Hindu
+      definition_en: "The vital breath or life force that sustains all living beings."
+    scholarly_basis: "Needham; vital force comparison across civilizations"
+    expected_similarity: "0.6-0.8"
+
+  - id: pair_13
+    concept_a:
+      id: confucius.li_ritual
+      term_zh: 禮
+      term_en: li (ritual propriety)
+      tradition: Confucianism
+      definition_zh: "社会生活的礼仪规范和道德秩序。"
+      definition_en: "Ritual propriety, ceremony, and the normative patterns of social life."
+      source_texts: ["《论语》", "《礼记》"]
+    concept_b:
+      id: hegel.sittlichkeit
+      term_de: Sittlichkeit
+      term_en: ethical life
+      tradition: German Idealism
+      definition_de: "Die konkrete sittliche Wirklichkeit in Familie, bürgerlicher Gesellschaft und Staat."
+      definition_en: "Concrete ethical life embodied in family, civil society, and state."
+      source_texts: ["Hegel, Philosophy of Right (1821)"]
+    scholarly_basis: "Rosemont 2015; ethical life as practice"
+    expected_similarity: "0.5-0.7"
+
+  - id: pair_14
+    concept_a:
+      id: buddhism.pratityasamutpada
+      term_sa: pratītyasamutpāda
+      term_en: dependent origination
+      tradition: Buddhism
+      definition_en: "All phenomena arise in dependence upon causes and conditions. Nothing exists independently."
+    concept_b:
+      id: whitehead.process
+      term_en: process
+      tradition: Process Philosophy
+      definition_en: "Reality consists not of substances but of processes of becoming. Each actual occasion prehends others."
+      source_texts: ["A.N. Whitehead, Process and Reality (1929)"]
+    scholarly_basis: "Odin 1982; relational becoming"
+    expected_similarity: "0.6-0.8"
+
+  - id: pair_15
+    concept_a:
+      id: advaita.maya
+      term_sa: māyā
+      term_en: illusion/cosmic power
+      tradition: Advaita Vedanta
+      definition_en: "The cosmic power of illusion that makes the one Brahman appear as the manifold world."
+      source_texts: ["Shankara, Vivekachudamani"]
+    concept_b:
+      id: kant.schein
+      term_de: Schein
+      term_en: appearance/illusion
+      tradition: Kantian
+      definition_de: "Der transzendentale Schein: die unvermeidliche Illusion der reinen Vernunft."
+      definition_en: "Transcendental illusion: the unavoidable illusion of pure reason that mistakes appearances for things-in-themselves."
+      source_texts: ["Kant, Critique of Pure Reason, A293/B349"]
+    scholarly_basis: "Deutsch 1969; illusion vs. appearance"
+    expected_similarity: "0.5-0.7"
+
+negative_pairs:
+  - id: neg_01
+    concept_a: {id: confucius.ren, term: "仁", tradition: Confucianism}
+    concept_b: {id: nietzsche.will_to_power, term: "will to power", tradition: Continental}
+    reason: "Opposite ethical valence: compassionate virtue vs. self-overcoming power"
+    expected_similarity: "<0.3"
+
+  - id: neg_02
+    concept_a: {id: nagarjuna.sunyata, term: "śūnyatā", tradition: Buddhism}
+    concept_b: {id: aristotle.ousia, term: "substance (ousia)", tradition: Aristotelianism}
+    reason: "Ontological opposites: emptiness of inherent existence vs. self-subsistent substance"
+    expected_similarity: "<0.3"
+
+  - id: neg_03
+    concept_a: {id: hinduism.karma, term: "karma", tradition: Hinduism}
+    concept_b: {id: calvin.predestination, term: "predestination", tradition: Calvinism}
+    reason: "Superficial similarity but deep divergence: self-determined consequence vs. divine decree"
+    expected_similarity: "<0.4"
+
+  - id: neg_04
+    concept_a: {id: daoism.wuwei, term: "無為", tradition: Daoism}
+    concept_b: {id: kant.categorical_imperative, term: "categorical imperative", tradition: Kantian}
+    reason: "Effortless non-action vs. duty-bound rational maxim"
+    expected_similarity: "<0.3"
+
+  - id: neg_05
+    concept_a: {id: ubuntu.ubuntu, term: "ubuntu", tradition: Ubuntu Philosophy}
+    concept_b: {id: hobbes.state_of_nature, term: "state of nature", tradition: Social Contract}
+    reason: "Communal interdependence vs. atomistic war of all against all"
+    expected_similarity: "<0.3"

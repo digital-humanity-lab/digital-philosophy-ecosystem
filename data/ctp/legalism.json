@@ -1,0 +1,15 @@
+[
+  {
+    "urn": "ctp:han-feizi",
+    "title": "",
+    "title_en": "",
+    "dynasty": {},
+    "chapters": [],
+    "full_text": {
+      "error": {
+        "code": "ERR_INVALID_URN",
+        "description": "Invalid <a href=\"https://ctext.org/tools/api#urn\">URN</a>."
+      }
+    }
+  }
+]

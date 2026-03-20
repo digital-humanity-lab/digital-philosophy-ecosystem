@@ -1,0 +1,28 @@
+[project]
+name = "philtext"
+version = "0.1.0"
+description = "Philosophical text analysis toolkit"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.0",
+    "networkx>=3.0",
+    "numpy>=1.26",
+    "httpx>=0.27",
+    "jinja2>=3.1",
+]
+
+[project.optional-dependencies]
+embed = ["sentence-transformers>=3.0"]
+ja = ["sudachipy>=0.6", "sudachidict-core>=20240109"]
+zh = ["jieba>=0.42"]
+classical = ["cltk>=1.3"]
+llm = ["litellm>=1.40"]
+nlp = ["spacy>=3.7", "transformers>=4.40", "torch>=2.2"]
+all = ["philtext[embed,ja,zh,classical,llm,nlp]"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/philtext"]

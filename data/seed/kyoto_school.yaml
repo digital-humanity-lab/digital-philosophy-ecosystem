@@ -1,0 +1,405 @@
+# Kyoto School - Manual Seed Data for philgraph
+# Sources: SEP entries, scholarly consensus
+
+nodes:
+  # Traditions
+  - type: Tradition
+    uid: "tradition:kyoto-school"
+    label: "Kyoto School"
+    labels_i18n:
+      ja: "京都学派"
+      de: "Kyoto-Schule"
+    region: "East Asia"
+    start_year: 1913
+    external_ids:
+      wikidata: "Q1136583"
+
+  - type: Tradition
+    uid: "tradition:continental-phenomenology"
+    label: "Continental Phenomenology"
+    labels_i18n:
+      de: "Phänomenologie"
+      ja: "現象学"
+    region: "Europe"
+    start_year: 1900
+
+  - type: Tradition
+    uid: "tradition:buddhism-madhyamaka"
+    label: "Madhyamaka Buddhism"
+    labels_i18n:
+      sa: "Mādhyamaka"
+      ja: "中観派"
+    region: "South Asia"
+    start_year: -150
+
+  # Thinkers
+  - type: Thinker
+    uid: "thinker:nishida-kitaro"
+    label: "Nishida Kitaro"
+    labels_i18n:
+      ja: "西田幾多郎"
+    birth_year: 1870
+    death_year: 1945
+    nationality: "JP"
+    languages: ["ja", "de"]
+    tradition_uids: ["tradition:kyoto-school"]
+    external_ids:
+      wikidata: "Q455925"
+
+  - type: Thinker
+    uid: "thinker:tanabe-hajime"
+    label: "Tanabe Hajime"
+    labels_i18n:
+      ja: "田辺元"
+    birth_year: 1885
+    death_year: 1962
+    nationality: "JP"
+    tradition_uids: ["tradition:kyoto-school"]
+    external_ids:
+      wikidata: "Q1375901"
+
+  - type: Thinker
+    uid: "thinker:nishitani-keiji"
+    label: "Nishitani Keiji"
+    labels_i18n:
+      ja: "西谷啓治"
+    birth_year: 1900
+    death_year: 1990
+    nationality: "JP"
+    tradition_uids: ["tradition:kyoto-school"]
+    external_ids:
+      wikidata: "Q1375914"
+
+  - type: Thinker
+    uid: "thinker:watsuji-tetsuro"
+    label: "Watsuji Tetsuro"
+    labels_i18n:
+      ja: "和辻哲郎"
+    birth_year: 1889
+    death_year: 1960
+    nationality: "JP"
+    tradition_uids: ["tradition:kyoto-school"]
+    external_ids:
+      wikidata: "Q708826"
+
+  - type: Thinker
+    uid: "thinker:heidegger"
+    label: "Martin Heidegger"
+    labels_i18n:
+      ja: "マルティン・ハイデッガー"
+      de: "Martin Heidegger"
+    birth_year: 1889
+    death_year: 1976
+    nationality: "DE"
+    tradition_uids: ["tradition:continental-phenomenology"]
+    external_ids:
+      wikidata: "Q48301"
+
+  - type: Thinker
+    uid: "thinker:nagarjuna"
+    label: "Nagarjuna"
+    labels_i18n:
+      sa: "Nāgārjuna"
+      ja: "龍樹"
+      zh: "龍樹"
+    birth_year: 150
+    death_year: 250
+    tradition_uids: ["tradition:buddhism-madhyamaka"]
+    external_ids:
+      wikidata: "Q192885"
+
+  # Concepts
+  - type: Concept
+    uid: "concept:basho"
+    label: "Basho (Place)"
+    labels_i18n:
+      ja: "場所"
+    definition: "Nishida's concept of 'place' as the self-determining locus of experience. The ultimate basho is absolute nothingness."
+    tradition_uids: ["tradition:kyoto-school"]
+    first_attested_year: 1926
+    keywords: ["place", "topos", "nothingness", "self-awareness"]
+
+  - type: Concept
+    uid: "concept:zettai-mu"
+    label: "Absolute Nothingness"
+    labels_i18n:
+      ja: "絶対無"
+    definition: "The ultimate place that envelops all being without itself being determined. The ground prior to subject-object division."
+    tradition_uids: ["tradition:kyoto-school"]
+    first_attested_year: 1926
+    keywords: ["nothingness", "mu", "absolute", "ground"]
+
+  - type: Concept
+    uid: "concept:aidagara"
+    label: "Aidagara (Betweenness)"
+    labels_i18n:
+      ja: "間柄"
+    definition: "The relational space between persons that constitutes their individuality."
+    tradition_uids: ["tradition:kyoto-school"]
+    first_attested_year: 1934
+    keywords: ["betweenness", "relation", "ethics", "person"]
+
+  - type: Concept
+    uid: "concept:fudo"
+    label: "Fudo (Climate/Milieu)"
+    labels_i18n:
+      ja: "風土"
+    definition: "The climatic and cultural milieu that shapes human self-understanding. Not mere environment but the lived space of human existence."
+    tradition_uids: ["tradition:kyoto-school"]
+    first_attested_year: 1935
+    keywords: ["climate", "milieu", "culture", "environment"]
+
+  - type: Concept
+    uid: "concept:sunyata"
+    label: "Sunyata (Emptiness)"
+    labels_i18n:
+      sa: "śūnyatā"
+      ja: "空"
+      zh: "空"
+    definition: "The emptiness of inherent existence. All phenomena arise dependently and lack self-nature."
+    tradition_uids: ["tradition:buddhism-madhyamaka"]
+    first_attested_year: -150
+    keywords: ["emptiness", "dependent origination", "no-self"]
+
+  - type: Concept
+    uid: "concept:dasein"
+    label: "Dasein"
+    labels_i18n:
+      de: "Dasein"
+      ja: "現存在"
+    definition: "The being that understands Being. Human existence as being-in-the-world."
+    tradition_uids: ["tradition:continental-phenomenology"]
+    first_attested_year: 1927
+    keywords: ["being", "existence", "understanding", "world"]
+
+  - type: Concept
+    uid: "concept:lichtung"
+    label: "Lichtung (Clearing)"
+    labels_i18n:
+      de: "Lichtung"
+      ja: "開け"
+    definition: "The open region in which beings can show themselves and withdraw."
+    tradition_uids: ["tradition:continental-phenomenology"]
+    first_attested_year: 1964
+    keywords: ["clearing", "openness", "truth", "unconcealment"]
+
+  # Texts
+  - type: Text
+    uid: "text:zen-no-kenkyu"
+    label: "An Inquiry into the Good"
+    labels_i18n:
+      ja: "善の研究"
+    author_uids: ["thinker:nishida-kitaro"]
+    year: 1911
+    language: "ja"
+
+  - type: Text
+    uid: "text:basho-essay"
+    label: "Basho (Place)"
+    labels_i18n:
+      ja: "場所"
+    author_uids: ["thinker:nishida-kitaro"]
+    year: 1926
+    language: "ja"
+
+  - type: Text
+    uid: "text:rinrigaku"
+    label: "Rinrigaku: Ethics in Japan"
+    labels_i18n:
+      ja: "倫理学"
+    author_uids: ["thinker:watsuji-tetsuro"]
+    year: 1937
+    language: "ja"
+
+  - type: Text
+    uid: "text:fudo"
+    label: "Fudo: Wind and Earth"
+    labels_i18n:
+      ja: "風土"
+    author_uids: ["thinker:watsuji-tetsuro"]
+    year: 1935
+    language: "ja"
+
+  - type: Text
+    uid: "text:religion-nothingness"
+    label: "Religion and Nothingness"
+    labels_i18n:
+      ja: "宗教とは何か"
+    author_uids: ["thinker:nishitani-keiji"]
+    year: 1961
+    language: "ja"
+
+edges:
+  # Influence relations
+  - source: "thinker:nishida-kitaro"
+    target: "thinker:tanabe-hajime"
+    type: "influences"
+    properties:
+      confidence: 0.95
+      consensus: "established"
+      evidence_sources: ["SEP: Nishida Kitaro"]
+
+  - source: "thinker:nishida-kitaro"
+    target: "thinker:nishitani-keiji"
+    type: "influences"
+    properties:
+      confidence: 0.95
+      consensus: "established"
+      evidence_sources: ["SEP: Nishitani Keiji"]
+
+  - source: "thinker:nishida-kitaro"
+    target: "thinker:watsuji-tetsuro"
+    type: "influences"
+    properties:
+      confidence: 0.8
+      consensus: "established"
+
+  - source: "thinker:heidegger"
+    target: "thinker:nishida-kitaro"
+    type: "influences"
+    properties:
+      confidence: 0.7
+      consensus: "debated"
+      notes: "Nishida read Heidegger but developed independently; mutual awareness"
+
+  - source: "thinker:nagarjuna"
+    target: "thinker:nishida-kitaro"
+    type: "influences"
+    properties:
+      confidence: 0.85
+      consensus: "established"
+      notes: "Buddhist nothingness deeply influenced Nishida's absolute nothingness"
+
+  - source: "thinker:nagarjuna"
+    target: "thinker:nishitani-keiji"
+    type: "influences"
+    properties:
+      confidence: 0.9
+      consensus: "established"
+
+  # Thinker-concept relations
+  - source: "thinker:nishida-kitaro"
+    target: "concept:basho"
+    type: "reinterprets"
+    properties:
+      confidence: 0.95
+      consensus: "established"
+      temporal_start: 1926
+
+  - source: "thinker:nishida-kitaro"
+    target: "concept:zettai-mu"
+    type: "reinterprets"
+    properties:
+      confidence: 0.95
+      consensus: "established"
+
+  - source: "thinker:watsuji-tetsuro"
+    target: "concept:aidagara"
+    type: "reinterprets"
+    properties:
+      confidence: 0.95
+      consensus: "established"
+      temporal_start: 1934
+
+  - source: "thinker:watsuji-tetsuro"
+    target: "concept:fudo"
+    type: "reinterprets"
+    properties:
+      confidence: 0.95
+      consensus: "established"
+      temporal_start: 1935
+
+  # Tradition membership
+  - source: "thinker:nishida-kitaro"
+    target: "tradition:kyoto-school"
+    type: "belongs_to_tradition"
+    properties: {confidence: 1.0}
+
+  - source: "thinker:tanabe-hajime"
+    target: "tradition:kyoto-school"
+    type: "belongs_to_tradition"
+    properties: {confidence: 1.0}
+
+  - source: "thinker:nishitani-keiji"
+    target: "tradition:kyoto-school"
+    type: "belongs_to_tradition"
+    properties: {confidence: 1.0}
+
+  - source: "thinker:watsuji-tetsuro"
+    target: "tradition:kyoto-school"
+    type: "belongs_to_tradition"
+    properties: {confidence: 0.85, notes: "Often associated but sometimes considered independent"}
+
+  - source: "concept:basho"
+    target: "tradition:kyoto-school"
+    type: "belongs_to_tradition"
+    properties: {confidence: 1.0}
+
+  - source: "concept:zettai-mu"
+    target: "tradition:kyoto-school"
+    type: "belongs_to_tradition"
+    properties: {confidence: 1.0}
+
+  - source: "concept:aidagara"
+    target: "tradition:kyoto-school"
+    type: "belongs_to_tradition"
+    properties: {confidence: 1.0}
+
+  - source: "concept:sunyata"
+    target: "tradition:buddhism-madhyamaka"
+    type: "belongs_to_tradition"
+    properties: {confidence: 1.0}
+
+  # Cross-tradition concept analogies
+  - source: "concept:zettai-mu"
+    target: "concept:sunyata"
+    type: "analogous_to"
+    properties:
+      confidence: 0.75
+      consensus: "debated"
+      evidence_sources: ["Nishitani 1982", "Parkes 1987"]
+      notes: "Nishida synthesized Buddhist sunyata with German idealism"
+
+  - source: "concept:basho"
+    target: "concept:lichtung"
+    type: "analogous_to"
+    properties:
+      confidence: 0.65
+      consensus: "debated"
+      evidence_sources: ["Davis 2019"]
+      notes: "Both concern the open space where beings appear, but from different grounds"
+
+  # Concept relations within traditions
+  - source: "concept:zettai-mu"
+    target: "concept:basho"
+    type: "extends"
+    properties:
+      confidence: 0.9
+      consensus: "established"
+      notes: "Absolute nothingness is the ultimate basho"
+
+  # Authored-by
+  - source: "text:zen-no-kenkyu"
+    target: "thinker:nishida-kitaro"
+    type: "authored_by"
+    properties: {confidence: 1.0}
+
+  - source: "text:basho-essay"
+    target: "thinker:nishida-kitaro"
+    type: "authored_by"
+    properties: {confidence: 1.0}
+
+  - source: "text:rinrigaku"
+    target: "thinker:watsuji-tetsuro"
+    type: "authored_by"
+    properties: {confidence: 1.0}
+
+  - source: "text:fudo"
+    target: "thinker:watsuji-tetsuro"
+    type: "authored_by"
+    properties: {confidence: 1.0}
+
+  - source: "text:religion-nothingness"
+    target: "thinker:nishitani-keiji"
+    type: "authored_by"
+    properties: {confidence: 1.0}

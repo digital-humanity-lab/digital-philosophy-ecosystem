@@ -1,0 +1,126 @@
+[
+  {
+    "urn": "ctp:analects",
+    "title": "論語",
+    "title_en": "",
+    "dynasty": {
+      "from": {
+        "id": 3,
+        "name": "Spring and Autumn"
+      },
+      "to": {
+        "id": 4,
+        "name": "Warring States"
+      }
+    },
+    "chapters": [],
+    "full_text": {
+      "subsections": [
+        "ctp:analects/xue-er",
+        "ctp:analects/wei-zheng",
+        "ctp:analects/ba-yi",
+        "ctp:analects/li-ren",
+        "ctp:analects/gong-ye-chang",
+        "ctp:analects/yong-ye",
+        "ctp:analects/shu-er",
+        "ctp:analects/tai-bo",
+        "ctp:analects/zi-han",
+        "ctp:analects/xiang-dang",
+        "ctp:analects/xian-jin",
+        "ctp:analects/yan-yuan",
+        "ctp:analects/zi-lu",
+        "ctp:analects/xian-wen",
+        "ctp:analects/wei-ling-gong",
+        "ctp:analects/ji-shi",
+        "ctp:analects/yang-huo",
+        "ctp:analects/wei-zi",
+        "ctp:analects/zi-zhang",
+        "ctp:analects/yao-yue"
+      ],
+      "title": "論語"
+    }
+  },
+  {
+    "urn": "ctp:mengzi",
+    "title": "孟子",
+    "title_en": "",
+    "dynasty": {
+      "from": {
+        "id": 4,
+        "name": "Warring States"
+      },
+      "to": {
+        "id": 4,
+        "name": "Warring States"
+      }
+    },
+    "chapters": [],
+    "full_text": {
+      "subsections": [
+        "ctp:mengzi/liang-hui-wang-i",
+        "ctp:mengzi/liang-hui-wang-ii",
+        "ctp:mengzi/gong-sun-chou-i",
+        "ctp:mengzi/gong-sun-chou-ii",
+        "ctp:mengzi/teng-wen-gong-i",
+        "ctp:mengzi/teng-wen-gong-ii",
+        "ctp:mengzi/li-lou-i",
+        "ctp:mengzi/li-lou-ii",
+        "ctp:mengzi/wan-zhang-i",
+        "ctp:mengzi/wan-zhang-ii",
+        "ctp:mengzi/gaozi-i",
+        "ctp:mengzi/gaozi-ii",
+        "ctp:mengzi/jin-xin-i",
+        "ctp:mengzi/jin-xin-ii"
+      ],
+      "title": "孟子"
+    }
+  },
+  {
+    "urn": "ctp:daxue",
+    "title": "",
+    "title_en": "",
+    "dynasty": {},
+    "chapters": [],
+    "full_text": {
+      "error": {
+        "code": "ERR_INVALID_URN",
+        "description": "Invalid <a href=\"https://ctext.org/tools/api#urn\">URN</a>."
+      }
+    }
+  },
+  {
+    "urn": "ctp:zhongyong",
+    "title": "",
+    "title_en": "",
+    "dynasty": {},
+    "chapters": [],
+    "full_text": {
+      "error": {
+        "code": "ERR_INVALID_URN",
+        "description": "Invalid <a href=\"https://ctext.org/tools/api#urn\">URN</a>."
+      }
+    }
+  },
+  {
+    "urn": "ctp:xunzi",
+    "title": "荀子",
+    "title_en": "",
+    "dynasty": {
+      "from": {
+        "id": 4,
+        "name": "Warring States"
+      },
+      "to": {
+        "id": 4,
+        "name": "Warring States"
+      }
+    },
+    "chapters": [],
+    "full_text": {
+      "error": {
+        "code": "ERR_REQUIRES_AUTHENTICATION",
+        "description": "The requested function requires authentication to continue. Please access the API from a <a href=\"http://ctext.org/tools/subscribe\">registered IP address</a> or supply a valid API key."
+      }
+    }
+  }
+]

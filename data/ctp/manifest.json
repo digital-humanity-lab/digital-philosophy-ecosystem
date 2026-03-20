@@ -1,0 +1,55 @@
+{
+  "confucianism": [
+    {
+      "urn": "ctp:analects",
+      "title": "論語",
+      "chapters_fetched": 0
+    },
+    {
+      "urn": "ctp:mengzi",
+      "title": "孟子",
+      "chapters_fetched": 0
+    },
+    {
+      "urn": "ctp:daxue",
+      "title": "",
+      "chapters_fetched": 0
+    },
+    {
+      "urn": "ctp:zhongyong",
+      "title": "",
+      "chapters_fetched": 0
+    },
+    {
+      "urn": "ctp:xunzi",
+      "title": "荀子",
+      "chapters_fetched": 0
+    }
+  ],
+  "daoism": [
+    {
+      "urn": "ctp:dao-de-jing",
+      "title": "道德經",
+      "chapters_fetched": 0
+    },
+    {
+      "urn": "ctp:zhuangzi",
+      "title": "莊子",
+      "chapters_fetched": 0
+    }
+  ],
+  "legalism": [
+    {
+      "urn": "ctp:han-feizi",
+      "title": "",
+      "chapters_fetched": 0
+    }
+  ],
+  "mohism": [
+    {
+      "urn": "ctp:mozi",
+      "title": "墨子",
+      "chapters_fetched": 0
+    }
+  ]
+}

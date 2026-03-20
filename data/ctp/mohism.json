@@ -1,0 +1,38 @@
+[
+  {
+    "urn": "ctp:mozi",
+    "title": "墨子",
+    "title_en": "",
+    "dynasty": {
+      "from": {
+        "id": 3,
+        "name": "Spring and Autumn"
+      },
+      "to": {
+        "id": 4,
+        "name": "Warring States"
+      }
+    },
+    "chapters": [],
+    "full_text": {
+      "subsections": [
+        "ctp:mozi/book-1",
+        "ctp:mozi/book-2",
+        "ctp:mozi/book-3",
+        "ctp:mozi/book-4",
+        "ctp:mozi/book-5",
+        "ctp:mozi/book-6",
+        "ctp:mozi/book-7",
+        "ctp:mozi/book-8",
+        "ctp:mozi/book-9",
+        "ctp:mozi/book-10",
+        "ctp:mozi/book-11",
+        "ctp:mozi/book-12",
+        "ctp:mozi/book-13",
+        "ctp:mozi/book-14",
+        "ctp:mozi/book-15"
+      ],
+      "title": "墨子"
+    }
+  }
+]

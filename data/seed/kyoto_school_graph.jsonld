@@ -1,0 +1,115 @@
+{
+  "@context": {
+    "phil": "http://philgraph.org/ontology/",
+    "phild": "http://philgraph.org/data/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label"
+  },
+  "@graph": [
+    {
+      "@id": "phild:tradition:kyoto-school",
+      "@type": "phil:Tradition",
+      "label": "Kyoto School"
+    },
+    {
+      "@id": "phild:tradition:continental-phenomenology",
+      "@type": "phil:Tradition",
+      "label": "Continental Phenomenology"
+    },
+    {
+      "@id": "phild:tradition:buddhism-madhyamaka",
+      "@type": "phil:Tradition",
+      "label": "Madhyamaka Buddhism"
+    },
+    {
+      "@id": "phild:thinker:nishida-kitaro",
+      "@type": "phil:Thinker",
+      "label": "Nishida Kitaro"
+    },
+    {
+      "@id": "phild:thinker:tanabe-hajime",
+      "@type": "phil:Thinker",
+      "label": "Tanabe Hajime"
+    },
+    {
+      "@id": "phild:thinker:nishitani-keiji",
+      "@type": "phil:Thinker",
+      "label": "Nishitani Keiji"
+    },
+    {
+      "@id": "phild:thinker:watsuji-tetsuro",
+      "@type": "phil:Thinker",
+      "label": "Watsuji Tetsuro"
+    },
+    {
+      "@id": "phild:thinker:heidegger",
+      "@type": "phil:Thinker",
+      "label": "Martin Heidegger"
+    },
+    {
+      "@id": "phild:thinker:nagarjuna",
+      "@type": "phil:Thinker",
+      "label": "Nagarjuna"
+    },
+    {
+      "@id": "phild:concept:basho",
+      "@type": "phil:Concept",
+      "label": "Basho (Place)"
+    },
+    {
+      "@id": "phild:concept:zettai-mu",
+      "@type": "phil:Concept",
+      "label": "Absolute Nothingness"
+    },
+    {
+      "@id": "phild:concept:aidagara",
+      "@type": "phil:Concept",
+      "label": "Aidagara (Betweenness)"
+    },
+    {
+      "@id": "phild:concept:fudo",
+      "@type": "phil:Concept",
+      "label": "Fudo (Climate/Milieu)"
+    },
+    {
+      "@id": "phild:concept:sunyata",
+      "@type": "phil:Concept",
+      "label": "Sunyata (Emptiness)"
+    },
+    {
+      "@id": "phild:concept:dasein",
+      "@type": "phil:Concept",
+      "label": "Dasein"
+    },
+    {
+      "@id": "phild:concept:lichtung",
+      "@type": "phil:Concept",
+      "label": "Lichtung (Clearing)"
+    },
+    {
+      "@id": "phild:text:zen-no-kenkyu",
+      "@type": "phil:Text",
+      "label": "An Inquiry into the Good"
+    },
+    {
+      "@id": "phild:text:basho-essay",
+      "@type": "phil:Text",
+      "label": "Basho (Place)"
+    },
+    {
+      "@id": "phild:text:rinrigaku",
+      "@type": "phil:Text",
+      "label": "Rinrigaku: Ethics in Japan"
+    },
+    {
+      "@id": "phild:text:fudo",
+      "@type": "phil:Text",
+      "label": "Fudo: Wind and Earth"
+    },
+    {
+      "@id": "phild:text:religion-nothingness",
+      "@type": "phil:Text",
+      "label": "Religion and Nothingness"
+    }
+  ]
+}

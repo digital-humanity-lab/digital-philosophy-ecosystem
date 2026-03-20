@@ -1,0 +1,251 @@
+# South Asian Philosophy - Manual Seed Data
+
+nodes:
+  # ── Traditions ──────────────────────────────────────────────
+  - type: Tradition
+    uid: "tradition:nyaya"
+    label: "Nyaya"
+    labels_i18n: {sa: "न्याय", ja: "ニヤーヤ学派"}
+    region: "South Asia"
+    start_year: -200
+
+  - type: Tradition
+    uid: "tradition:vedanta"
+    label: "Vedanta"
+    labels_i18n: {sa: "वेदान्त", ja: "ヴェーダーンタ"}
+    region: "South Asia"
+    start_year: -500
+
+  - type: Tradition
+    uid: "tradition:advaita"
+    label: "Advaita Vedanta"
+    labels_i18n: {sa: "अद्वैत वेदान्त", ja: "不二一元論"}
+    region: "South Asia"
+    start_year: 700
+    parent_tradition_uid: "tradition:vedanta"
+
+  - type: Tradition
+    uid: "tradition:yogacara"
+    label: "Yogacara"
+    labels_i18n: {sa: "योगाचार", ja: "唯識", zh: "唯识宗"}
+    region: "South Asia"
+    start_year: 300
+
+  - type: Tradition
+    uid: "tradition:jainism"
+    label: "Jain Philosophy"
+    labels_i18n: {sa: "जैन दर्शन", ja: "ジャイナ哲学"}
+    region: "South Asia"
+    start_year: -600
+
+  - type: Tradition
+    uid: "tradition:samkhya"
+    label: "Samkhya"
+    labels_i18n: {sa: "सांख्य", ja: "サーンキヤ"}
+    region: "South Asia"
+    start_year: -500
+
+  # ── Thinkers ────────────────────────────────────────────────
+  - type: Thinker
+    uid: "thinker:gautama-aksapada"
+    label: "Gautama Aksapada"
+    labels_i18n: {sa: "गौतम अक्षपाद"}
+    birth_year: -200
+    tradition_uids: ["tradition:nyaya"]
+    external_ids: {wikidata: "Q2505836"}
+
+  - type: Thinker
+    uid: "thinker:shankara"
+    label: "Adi Shankara"
+    labels_i18n: {sa: "आदि शङ्कर", ja: "シャンカラ"}
+    birth_year: 788
+    death_year: 820
+    tradition_uids: ["tradition:advaita"]
+    external_ids: {wikidata: "Q208549"}
+
+  - type: Thinker
+    uid: "thinker:ramanuja"
+    label: "Ramanuja"
+    labels_i18n: {sa: "रामानुज", ja: "ラーマーヌジャ"}
+    birth_year: 1017
+    death_year: 1137
+    tradition_uids: ["tradition:vedanta"]
+    external_ids: {wikidata: "Q528138"}
+
+  - type: Thinker
+    uid: "thinker:vasubandhu"
+    label: "Vasubandhu"
+    labels_i18n: {sa: "वसुबन्धु", ja: "世親", zh: "世亲"}
+    birth_year: 316
+    death_year: 396
+    tradition_uids: ["tradition:yogacara"]
+    external_ids: {wikidata: "Q464553"}
+
+  - type: Thinker
+    uid: "thinker:dignaga"
+    label: "Dignaga"
+    labels_i18n: {sa: "दिङ्नाग", ja: "陳那"}
+    birth_year: 480
+    death_year: 540
+    tradition_uids: ["tradition:buddhism-madhyamaka"]
+    external_ids: {wikidata: "Q464605"}
+
+  - type: Thinker
+    uid: "thinker:dharmakirti"
+    label: "Dharmakirti"
+    labels_i18n: {sa: "धर्मकीर्ति", ja: "法称"}
+    birth_year: 600
+    death_year: 660
+    tradition_uids: ["tradition:buddhism-madhyamaka"]
+    external_ids: {wikidata: "Q464632"}
+
+  - type: Thinker
+    uid: "thinker:chandrakirti"
+    label: "Chandrakirti"
+    labels_i18n: {sa: "चन्द्रकीर्ति", ja: "月称"}
+    birth_year: 600
+    death_year: 650
+    tradition_uids: ["tradition:buddhism-madhyamaka"]
+    external_ids: {wikidata: "Q466227"}
+
+  - type: Thinker
+    uid: "thinker:mahavira"
+    label: "Mahavira"
+    labels_i18n: {sa: "महावीर", ja: "マハーヴィーラ"}
+    birth_year: -599
+    death_year: -527
+    tradition_uids: ["tradition:jainism"]
+    external_ids: {wikidata: "Q191808"}
+
+  # ── Concepts ────────────────────────────────────────────────
+  - type: Concept
+    uid: "concept:pramana"
+    label: "Pramana (Valid Means of Knowledge)"
+    labels_i18n: {sa: "प्रमाण", ja: "量"}
+    definition: "Valid means of knowledge: perception, inference, comparison, testimony."
+    tradition_uids: ["tradition:nyaya"]
+    keywords: ["epistemology", "knowledge", "perception", "inference"]
+
+  - type: Concept
+    uid: "concept:brahman"
+    label: "Brahman"
+    labels_i18n: {sa: "ब्रह्मन्", ja: "ブラフマン"}
+    definition: "The ultimate reality, the ground of all being."
+    tradition_uids: ["tradition:vedanta"]
+    keywords: ["ultimate reality", "ground", "being", "absolute"]
+
+  - type: Concept
+    uid: "concept:atman"
+    label: "Atman (Self)"
+    labels_i18n: {sa: "आत्मन्", ja: "アートマン"}
+    definition: "The true self, identical with Brahman in Advaita."
+    tradition_uids: ["tradition:vedanta"]
+    keywords: ["self", "soul", "consciousness"]
+
+  - type: Concept
+    uid: "concept:maya"
+    label: "Maya (Illusion)"
+    labels_i18n: {sa: "माया", ja: "マーヤー"}
+    definition: "The cosmic power of illusion making Brahman appear as the manifold world."
+    tradition_uids: ["tradition:advaita"]
+    keywords: ["illusion", "appearance", "ignorance"]
+
+  - type: Concept
+    uid: "concept:karma"
+    label: "Karma"
+    labels_i18n: {sa: "कर्म", ja: "業", zh: "业"}
+    definition: "The moral law of cause and effect. Actions produce consequences across lifetimes."
+    tradition_uids: ["tradition:vedanta", "tradition:jainism"]
+    keywords: ["action", "consequence", "moral law", "rebirth"]
+
+  - type: Concept
+    uid: "concept:moksha"
+    label: "Moksha (Liberation)"
+    labels_i18n: {sa: "मोक्ष", ja: "解脱"}
+    definition: "Liberation from the cycle of birth and death."
+    tradition_uids: ["tradition:vedanta"]
+    keywords: ["liberation", "freedom", "realization"]
+
+  - type: Concept
+    uid: "concept:ahimsa"
+    label: "Ahimsa (Non-Violence)"
+    labels_i18n: {sa: "अहिंसा", ja: "不殺生"}
+    definition: "Non-harm to any living being in thought, word, and deed."
+    tradition_uids: ["tradition:jainism"]
+    keywords: ["non-violence", "non-harm", "compassion"]
+
+  - type: Concept
+    uid: "concept:pratityasamutpada"
+    label: "Pratityasamutpada (Dependent Origination)"
+    labels_i18n: {sa: "प्रतीत्यसमुत्पाद", ja: "縁起", zh: "缘起"}
+    definition: "All phenomena arise in dependence upon causes and conditions."
+    tradition_uids: ["tradition:buddhism-madhyamaka"]
+    keywords: ["dependent origination", "causation", "interconnection"]
+
+  - type: Concept
+    uid: "concept:vijnaptimatrata"
+    label: "Vijnaptimatrata (Consciousness-Only)"
+    labels_i18n: {sa: "विज्ञप्तिमात्रता", ja: "唯識", zh: "唯识"}
+    definition: "All experienced phenomena are only consciousness. No external objects exist independently."
+    tradition_uids: ["tradition:yogacara"]
+    keywords: ["consciousness", "mind-only", "idealism"]
+
+  - type: Concept
+    uid: "concept:anekantavada"
+    label: "Anekantavada (Many-Sidedness)"
+    labels_i18n: {sa: "अनेकान्तवाद"}
+    definition: "Reality is complex and can be perceived from multiple perspectives, none complete alone."
+    tradition_uids: ["tradition:jainism"]
+    keywords: ["pluralism", "perspectivism", "non-absolutism"]
+
+edges:
+  # ── Lineages ────────────────────────────────────────────────
+  - {source: "thinker:nagarjuna", target: "thinker:chandrakirti", type: "influences", properties: {confidence: 0.95, consensus: "established"}}
+  - {source: "thinker:nagarjuna", target: "thinker:dignaga", type: "influences", properties: {confidence: 0.8, consensus: "established"}}
+  - {source: "thinker:dignaga", target: "thinker:dharmakirti", type: "influences", properties: {confidence: 0.95, consensus: "established"}}
+  - {source: "thinker:vasubandhu", target: "thinker:dignaga", type: "influences", properties: {confidence: 0.85, consensus: "established"}}
+  - {source: "thinker:shankara", target: "thinker:ramanuja", type: "influences", properties: {confidence: 0.85, consensus: "established", notes: "Ramanuja critiqued Advaita"}}
+
+  # ── Tradition membership ────────────────────────────────────
+  - {source: "thinker:gautama-aksapada", target: "tradition:nyaya", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:shankara", target: "tradition:advaita", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:ramanuja", target: "tradition:vedanta", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:vasubandhu", target: "tradition:yogacara", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:dignaga", target: "tradition:buddhism-madhyamaka", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:dharmakirti", target: "tradition:buddhism-madhyamaka", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:chandrakirti", target: "tradition:buddhism-madhyamaka", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:mahavira", target: "tradition:jainism", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+
+  # ── Thinker-concept ─────────────────────────────────────────
+  - {source: "thinker:gautama-aksapada", target: "concept:pramana", type: "reinterprets", properties: {confidence: 0.95}}
+  - {source: "thinker:shankara", target: "concept:brahman", type: "reinterprets", properties: {confidence: 0.95}}
+  - {source: "thinker:shankara", target: "concept:maya", type: "reinterprets", properties: {confidence: 0.95}}
+  - {source: "thinker:shankara", target: "concept:atman", type: "reinterprets", properties: {confidence: 0.95}}
+  - {source: "thinker:vasubandhu", target: "concept:vijnaptimatrata", type: "reinterprets", properties: {confidence: 0.95}}
+  - {source: "thinker:mahavira", target: "concept:ahimsa", type: "reinterprets", properties: {confidence: 0.95}}
+  - {source: "thinker:mahavira", target: "concept:anekantavada", type: "reinterprets", properties: {confidence: 0.95}}
+
+  # ── Concept-tradition ───────────────────────────────────────
+  - {source: "concept:pramana", target: "tradition:nyaya", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "concept:brahman", target: "tradition:vedanta", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "concept:maya", target: "tradition:advaita", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "concept:karma", target: "tradition:vedanta", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "concept:moksha", target: "tradition:vedanta", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "concept:ahimsa", target: "tradition:jainism", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "concept:pratityasamutpada", target: "tradition:buddhism-madhyamaka", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "concept:vijnaptimatrata", target: "tradition:yogacara", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "concept:anekantavada", target: "tradition:jainism", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+
+  # ── Cross-tradition concept analogies ───────────────────────
+  - source: "concept:sunyata"
+    target: "concept:maya"
+    type: "analogous_to"
+    properties: {confidence: 0.6, consensus: "debated", notes: "Both concern the illusory nature of phenomenal reality"}
+  - source: "concept:pratityasamutpada"
+    target: "concept:karma"
+    type: "extends"
+    properties: {confidence: 0.75, notes: "Dependent origination generalizes the karma principle"}
+  - source: "concept:brahman"
+    target: "concept:atman"
+    type: "extends"
+    properties: {confidence: 0.95, notes: "Atman is Brahman in Advaita"}

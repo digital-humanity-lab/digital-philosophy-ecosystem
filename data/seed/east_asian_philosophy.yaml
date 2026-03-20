@@ -1,0 +1,380 @@
+# East Asian Philosophy - Manual Seed Data
+# Filling the Wikidata gap for Chinese, Japanese, Korean philosophical traditions
+
+nodes:
+  # ── Traditions ──────────────────────────────────────────────
+  - type: Tradition
+    uid: "tradition:confucianism"
+    label: "Confucianism"
+    labels_i18n: {zh: "儒家", ja: "儒教", ko: "유교"}
+    region: "East Asia"
+    start_year: -551
+
+  - type: Tradition
+    uid: "tradition:neo-confucianism"
+    label: "Neo-Confucianism"
+    labels_i18n: {zh: "宋明理学", ja: "朱子学", ko: "성리학"}
+    region: "East Asia"
+    start_year: 1000
+    parent_tradition_uid: "tradition:confucianism"
+
+  - type: Tradition
+    uid: "tradition:daoism"
+    label: "Daoism"
+    labels_i18n: {zh: "道家", ja: "道家", ko: "도가"}
+    region: "East Asia"
+    start_year: -600
+
+  - type: Tradition
+    uid: "tradition:chan-zen"
+    label: "Chan/Zen Buddhism"
+    labels_i18n: {zh: "禅宗", ja: "禅宗", ko: "선종"}
+    region: "East Asia"
+    start_year: 500
+
+  - type: Tradition
+    uid: "tradition:legalism"
+    label: "Legalism"
+    labels_i18n: {zh: "法家", ja: "法家"}
+    region: "East Asia"
+    start_year: -400
+
+  - type: Tradition
+    uid: "tradition:mohism"
+    label: "Mohism"
+    labels_i18n: {zh: "墨家", ja: "墨家"}
+    region: "East Asia"
+    start_year: -470
+
+  - type: Tradition
+    uid: "tradition:yangming"
+    label: "Yangming School"
+    labels_i18n: {zh: "阳明学", ja: "陽明学", ko: "양명학"}
+    region: "East Asia"
+    start_year: 1500
+    parent_tradition_uid: "tradition:neo-confucianism"
+
+  # ── Thinkers ────────────────────────────────────────────────
+  - type: Thinker
+    uid: "thinker:confucius"
+    label: "Confucius"
+    labels_i18n: {zh: "孔子", ja: "孔子", ko: "공자"}
+    birth_year: -551
+    death_year: -479
+    nationality: "CN"
+    tradition_uids: ["tradition:confucianism"]
+    external_ids: {wikidata: "Q4604"}
+
+  - type: Thinker
+    uid: "thinker:mencius"
+    label: "Mencius"
+    labels_i18n: {zh: "孟子", ja: "孟子", ko: "맹자"}
+    birth_year: -372
+    death_year: -289
+    nationality: "CN"
+    tradition_uids: ["tradition:confucianism"]
+    external_ids: {wikidata: "Q4396"}
+
+  - type: Thinker
+    uid: "thinker:xunzi"
+    label: "Xunzi"
+    labels_i18n: {zh: "荀子", ja: "荀子"}
+    birth_year: -310
+    death_year: -235
+    nationality: "CN"
+    tradition_uids: ["tradition:confucianism"]
+    external_ids: {wikidata: "Q83444"}
+
+  - type: Thinker
+    uid: "thinker:laozi"
+    label: "Laozi"
+    labels_i18n: {zh: "老子", ja: "老子", ko: "노자"}
+    birth_year: -601
+    death_year: -531
+    nationality: "CN"
+    tradition_uids: ["tradition:daoism"]
+    external_ids: {wikidata: "Q9333"}
+
+  - type: Thinker
+    uid: "thinker:zhuangzi"
+    label: "Zhuangzi"
+    labels_i18n: {zh: "庄子", ja: "荘子"}
+    birth_year: -369
+    death_year: -286
+    nationality: "CN"
+    tradition_uids: ["tradition:daoism"]
+    external_ids: {wikidata: "Q18838"}
+
+  - type: Thinker
+    uid: "thinker:mozi"
+    label: "Mozi"
+    labels_i18n: {zh: "墨子", ja: "墨子"}
+    birth_year: -470
+    death_year: -391
+    nationality: "CN"
+    tradition_uids: ["tradition:mohism"]
+    external_ids: {wikidata: "Q42156"}
+
+  - type: Thinker
+    uid: "thinker:han-feizi"
+    label: "Han Feizi"
+    labels_i18n: {zh: "韩非子", ja: "韓非子"}
+    birth_year: -280
+    death_year: -233
+    nationality: "CN"
+    tradition_uids: ["tradition:legalism"]
+    external_ids: {wikidata: "Q313434"}
+
+  - type: Thinker
+    uid: "thinker:zhu-xi"
+    label: "Zhu Xi"
+    labels_i18n: {zh: "朱熹", ja: "朱熹", ko: "주희"}
+    birth_year: 1130
+    death_year: 1200
+    nationality: "CN"
+    tradition_uids: ["tradition:neo-confucianism"]
+    external_ids: {wikidata: "Q204895"}
+
+  - type: Thinker
+    uid: "thinker:wang-yangming"
+    label: "Wang Yangming"
+    labels_i18n: {zh: "王阳明", ja: "王陽明", ko: "왕양명"}
+    birth_year: 1472
+    death_year: 1529
+    nationality: "CN"
+    tradition_uids: ["tradition:yangming"]
+    external_ids: {wikidata: "Q312609"}
+
+  - type: Thinker
+    uid: "thinker:huineng"
+    label: "Huineng"
+    labels_i18n: {zh: "惠能", ja: "慧能"}
+    birth_year: 638
+    death_year: 713
+    nationality: "CN"
+    tradition_uids: ["tradition:chan-zen"]
+    external_ids: {wikidata: "Q379429"}
+
+  - type: Thinker
+    uid: "thinker:dogen"
+    label: "Dogen"
+    labels_i18n: {ja: "道元", zh: "道元"}
+    birth_year: 1200
+    death_year: 1253
+    nationality: "JP"
+    tradition_uids: ["tradition:chan-zen"]
+    external_ids: {wikidata: "Q312778"}
+
+  - type: Thinker
+    uid: "thinker:kukai"
+    label: "Kukai"
+    labels_i18n: {ja: "空海", zh: "空海"}
+    birth_year: 774
+    death_year: 835
+    nationality: "JP"
+    tradition_uids: ["tradition:chan-zen"]
+    external_ids: {wikidata: "Q187028"}
+
+  # ── Concepts ────────────────────────────────────────────────
+  - type: Concept
+    uid: "concept:ren"
+    label: "Ren (Benevolence)"
+    labels_i18n: {zh: "仁", ja: "仁", ko: "인"}
+    definition: "The central virtue of Confucian ethics: benevolence, humaneness."
+    tradition_uids: ["tradition:confucianism"]
+    first_attested_year: -500
+    keywords: ["virtue", "benevolence", "humaneness", "love"]
+
+  - type: Concept
+    uid: "concept:li-ritual"
+    label: "Li (Ritual Propriety)"
+    labels_i18n: {zh: "禮", ja: "礼", ko: "예"}
+    definition: "Ritual propriety, ceremony, and the normative patterns of social life."
+    tradition_uids: ["tradition:confucianism"]
+    keywords: ["ritual", "propriety", "ceremony", "social order"]
+
+  - type: Concept
+    uid: "concept:yi"
+    label: "Yi (Righteousness)"
+    labels_i18n: {zh: "義", ja: "義", ko: "의"}
+    definition: "Righteousness, moral rightness, duty-bound action."
+    tradition_uids: ["tradition:confucianism"]
+    keywords: ["righteousness", "duty", "justice"]
+
+  - type: Concept
+    uid: "concept:xing"
+    label: "Xing (Human Nature)"
+    labels_i18n: {zh: "性", ja: "性"}
+    definition: "Human nature. Mencius: innately good. Xunzi: innately inclined to profit."
+    tradition_uids: ["tradition:confucianism"]
+    keywords: ["nature", "goodness", "human"]
+
+  - type: Concept
+    uid: "concept:dao"
+    label: "Dao (The Way)"
+    labels_i18n: {zh: "道", ja: "道", ko: "도"}
+    definition: "The Way, the source and pattern of all things. Dao that can be spoken is not the constant Dao."
+    tradition_uids: ["tradition:daoism"]
+    first_attested_year: -600
+    keywords: ["way", "cosmic order", "nameless"]
+
+  - type: Concept
+    uid: "concept:wuwei"
+    label: "Wuwei (Non-Action)"
+    labels_i18n: {zh: "無為", ja: "無為"}
+    definition: "Effortless action aligned with nature. Acting without forcing."
+    tradition_uids: ["tradition:daoism"]
+    keywords: ["non-action", "effortless", "spontaneous", "natural"]
+
+  - type: Concept
+    uid: "concept:qi"
+    label: "Qi (Vital Force)"
+    labels_i18n: {zh: "気", ja: "気", ko: "기"}
+    definition: "Vital force or material energy constituting all things."
+    tradition_uids: ["tradition:neo-confucianism"]
+    keywords: ["vital force", "energy", "matter"]
+
+  - type: Concept
+    uid: "concept:li-principle"
+    label: "Li (Principle)"
+    labels_i18n: {zh: "理", ja: "理", ko: "리"}
+    definition: "The principle or pattern inherent in all things. Li precedes qi."
+    tradition_uids: ["tradition:neo-confucianism"]
+    first_attested_year: 1130
+    keywords: ["principle", "pattern", "form", "order"]
+
+  - type: Concept
+    uid: "concept:liangzhi"
+    label: "Liangzhi (Innate Knowledge)"
+    labels_i18n: {zh: "良知", ja: "良知"}
+    definition: "Innate moral knowledge. Wang Yangming: knowledge and action are one."
+    tradition_uids: ["tradition:yangming"]
+    keywords: ["innate knowledge", "conscience", "unity of knowledge and action"]
+
+  - type: Concept
+    uid: "concept:jian-ai"
+    label: "Jian Ai (Universal Love)"
+    labels_i18n: {zh: "兼爱", ja: "兼愛"}
+    definition: "Universal, impartial love for all people without distinction."
+    tradition_uids: ["tradition:mohism"]
+    keywords: ["universal love", "impartial care"]
+
+  - type: Concept
+    uid: "concept:fa"
+    label: "Fa (Law)"
+    labels_i18n: {zh: "法", ja: "法"}
+    definition: "Law as the instrument of governance. Impartial standards applied uniformly."
+    tradition_uids: ["tradition:legalism"]
+    keywords: ["law", "governance", "standards"]
+
+  - type: Concept
+    uid: "concept:wu-buddhist"
+    label: "Wu/Mu (Nothingness)"
+    labels_i18n: {zh: "無", ja: "無"}
+    definition: "Nothingness, non-being. In Zen: the gateless gate, Joshu's Mu."
+    tradition_uids: ["tradition:chan-zen"]
+    keywords: ["nothingness", "emptiness", "mu", "koan"]
+
+  - type: Concept
+    uid: "concept:shinjin-datsuraku"
+    label: "Shinjin Datsuraku (Dropping Body-Mind)"
+    labels_i18n: {ja: "身心脱落"}
+    definition: "Dogen's concept: dropping off body and mind in seated meditation."
+    tradition_uids: ["tradition:chan-zen"]
+    keywords: ["body-mind", "zazen", "enlightenment", "dropping"]
+
+edges:
+  # ── Confucian lineage ───────────────────────────────────────
+  - source: "thinker:confucius"
+    target: "thinker:mencius"
+    type: "influences"
+    properties: {confidence: 0.95, consensus: "established"}
+  - source: "thinker:confucius"
+    target: "thinker:xunzi"
+    type: "influences"
+    properties: {confidence: 0.95, consensus: "established"}
+  - source: "thinker:confucius"
+    target: "thinker:mozi"
+    type: "influences"
+    properties: {confidence: 0.8, consensus: "established", notes: "Mozi reacted against Confucianism"}
+  - source: "thinker:mencius"
+    target: "thinker:zhu-xi"
+    type: "influences"
+    properties: {confidence: 0.9, consensus: "established"}
+  - source: "thinker:xunzi"
+    target: "thinker:han-feizi"
+    type: "influences"
+    properties: {confidence: 0.85, consensus: "established", notes: "Han Feizi studied under Xunzi"}
+  - source: "thinker:zhu-xi"
+    target: "thinker:wang-yangming"
+    type: "influences"
+    properties: {confidence: 0.9, consensus: "established", notes: "Wang Yangming critiqued and reinterpreted Zhu Xi"}
+
+  # ── Daoist lineage ──────────────────────────────────────────
+  - source: "thinker:laozi"
+    target: "thinker:zhuangzi"
+    type: "influences"
+    properties: {confidence: 0.9, consensus: "established"}
+
+  # ── Chan/Zen lineage ────────────────────────────────────────
+  - source: "thinker:huineng"
+    target: "thinker:dogen"
+    type: "influences"
+    properties: {confidence: 0.7, consensus: "debated", notes: "Indirect via lineage transmission"}
+
+  # ── Cross-tradition influences ──────────────────────────────
+  - source: "thinker:laozi"
+    target: "thinker:zhu-xi"
+    type: "influences"
+    properties: {confidence: 0.7, consensus: "established", notes: "Neo-Confucianism absorbed Daoist cosmology"}
+  - source: "thinker:huineng"
+    target: "thinker:zhu-xi"
+    type: "influences"
+    properties: {confidence: 0.65, consensus: "established", notes: "Neo-Confucianism absorbed Chan concepts"}
+
+  # ── Thinker-concept relations ───────────────────────────────
+  - {source: "thinker:confucius", target: "concept:ren", type: "reinterprets", properties: {confidence: 0.95}}
+  - {source: "thinker:confucius", target: "concept:li-ritual", type: "reinterprets", properties: {confidence: 0.95}}
+  - {source: "thinker:mencius", target: "concept:xing", type: "reinterprets", properties: {confidence: 0.95}}
+  - {source: "thinker:laozi", target: "concept:dao", type: "reinterprets", properties: {confidence: 0.95}}
+  - {source: "thinker:laozi", target: "concept:wuwei", type: "reinterprets", properties: {confidence: 0.95}}
+  - {source: "thinker:zhu-xi", target: "concept:li-principle", type: "reinterprets", properties: {confidence: 0.95}}
+  - {source: "thinker:zhu-xi", target: "concept:qi", type: "reinterprets", properties: {confidence: 0.9}}
+  - {source: "thinker:wang-yangming", target: "concept:liangzhi", type: "reinterprets", properties: {confidence: 0.95}}
+  - {source: "thinker:mozi", target: "concept:jian-ai", type: "reinterprets", properties: {confidence: 0.95}}
+  - {source: "thinker:han-feizi", target: "concept:fa", type: "reinterprets", properties: {confidence: 0.95}}
+  - {source: "thinker:dogen", target: "concept:shinjin-datsuraku", type: "reinterprets", properties: {confidence: 0.95}}
+
+  # ── Tradition membership ────────────────────────────────────
+  - {source: "thinker:confucius", target: "tradition:confucianism", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:mencius", target: "tradition:confucianism", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:xunzi", target: "tradition:confucianism", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:laozi", target: "tradition:daoism", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:zhuangzi", target: "tradition:daoism", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:mozi", target: "tradition:mohism", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:han-feizi", target: "tradition:legalism", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:zhu-xi", target: "tradition:neo-confucianism", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:wang-yangming", target: "tradition:yangming", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:huineng", target: "tradition:chan-zen", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:dogen", target: "tradition:chan-zen", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "thinker:kukai", target: "tradition:chan-zen", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "concept:ren", target: "tradition:confucianism", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "concept:li-ritual", target: "tradition:confucianism", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "concept:dao", target: "tradition:daoism", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "concept:wuwei", target: "tradition:daoism", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "concept:li-principle", target: "tradition:neo-confucianism", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+  - {source: "concept:wu-buddhist", target: "tradition:chan-zen", type: "belongs_to_tradition", properties: {confidence: 1.0}}
+
+  # ── Concept relations ───────────────────────────────────────
+  - source: "concept:ren"
+    target: "concept:li-ritual"
+    type: "extends"
+    properties: {confidence: 0.9, notes: "Ren requires li for expression; li without ren is empty"}
+  - source: "concept:li-principle"
+    target: "concept:qi"
+    type: "extends"
+    properties: {confidence: 0.9, notes: "Li and qi are inseparable in Neo-Confucian metaphysics"}
+  - source: "concept:jian-ai"
+    target: "concept:ren"
+    type: "opposes"
+    properties: {confidence: 0.8, notes: "Mozi's universal love vs Confucian graded love"}

@@ -20,3 +20,5 @@ venv/
 .vscode/
 models/philmap-e5-finetuned/model.safetensors
 models/philmap-e5-finetuned/tokenizer.json
+models/philmap-e5-finetuned-v2/model.safetensors
+models/philmap-e5-finetuned-v2/tokenizer.json

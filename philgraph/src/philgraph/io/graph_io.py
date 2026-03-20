@@ -16,17 +16,26 @@ class GraphIO:
 
     def export_graphml(self, path: str | Path) -> None:
         import networkx as nx
-        from philgraph.backends.networkx_backend import NetworkXBackend
-        if isinstance(self.graph.backend, NetworkXBackend):
-            nx.write_graphml(self.graph.backend.nx_graph, str(path))
-        else:
-            g = nx.MultiDiGraph()
-            for uid, node in self.graph.iter_nodes():
-                g.add_node(uid, label=node.label, type=type(node).__name__)
-            for edge in self.graph.iter_edges():
-                g.add_edge(edge.source_uid, edge.target_uid,
-                           key=edge.edge_type.value)
-            nx.write_graphml(g, str(path))
+        # Build a clean graph with only string/numeric attributes
+        g = nx.MultiDiGraph()
+        for uid, node in self.graph.iter_nodes():
+            attrs = {"label": node.label, "type": type(node).__name__}
+            for lang, lbl in node.labels_i18n.items():
+                attrs[f"label_{lang}"] = lbl
+            if hasattr(node, "birth_year") and node.birth_year:
+                attrs["birth_year"] = node.birth_year
+            if hasattr(node, "death_year") and node.death_year:
+                attrs["death_year"] = node.death_year
+            if hasattr(node, "definition") and node.definition:
+                attrs["definition"] = node.definition
+            g.add_node(uid, **attrs)
+        for edge in self.graph.iter_edges():
+            g.add_edge(
+                edge.source_uid, edge.target_uid,
+                key=edge.edge_type.value,
+                confidence=edge.properties.confidence,
+            )
+        nx.write_graphml(g, str(path))
 
     def export_jsonld(self, path: str | Path) -> None:
         context = {

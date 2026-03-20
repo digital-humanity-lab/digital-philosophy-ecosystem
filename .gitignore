@@ -18,3 +18,5 @@ venv/
 .DS_Store
 .idea/
 .vscode/
+models/philmap-e5-finetuned/model.safetensors
+models/philmap-e5-finetuned/tokenizer.json

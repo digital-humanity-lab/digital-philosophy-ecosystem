@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1497,
+    "title": "Republic",
+    "author": "Plato",
+    "chars": 1238673,
+    "file": "1497_plato.txt"
+  },
+  {
+    "id": 1656,
+    "title": "Apology",
+    "author": "Plato",
+    "chars": 106901,
+    "file": "1656_plato.txt"
+  },
+  {
+    "id": 5827,
+    "title": "Critique of Pure Reason",
+    "author": "Kant",
+    "chars": 269431,
+    "file": "5827_kant.txt"
+  },
+  {
+    "id": 4280,
+    "title": "Critique of Practical Reason",
+    "author": "Kant",
+    "chars": 1310583,
+    "file": "4280_kant.txt"
+  },
+  {
+    "id": 3600,
+    "title": "An Essay Concerning Human Understanding",
+    "author": "Locke",
+    "chars": 3086108,
+    "file": "3600_locke.txt"
+  },
+  {
+    "id": 4705,
+    "title": "A Treatise of Human Nature",
+    "author": "Hume",
+    "chars": 1365418,
+    "file": "4705_hume.txt"
+  },
+  {
+    "id": 10615,
+    "title": "Meditations on First Philosophy",
+    "author": "Descartes",
+    "chars": 868226,
+    "file": "10615_descartes.txt"
+  },
+  {
+    "id": 1232,
+    "title": "The Prince",
+    "author": "Machiavelli",
+    "chars": 307128,
+    "file": "1232_machiavelli.txt"
+  },
+  {
+    "id": 7370,
+    "title": "Beyond Good and Evil",
+    "author": "Nietzsche",
+    "chars": 338549,
+    "file": "7370_nietzsche.txt"
+  },
+  {
+    "id": 38427,
+    "title": "Thus Spake Zarathustra",
+    "author": "Nietzsche",
+    "chars": 1152011,
+    "file": "38427_nietzsche.txt"
+  },
+  {
+    "id": 30821,
+    "title": "On Liberty",
+    "author": "Mill",
+    "chars": 40205,
+    "file": "30821_mill.txt"
+  },
+  {
+    "id": 11224,
+    "title": "Leviathan",
+    "author": "Hobbes",
+    "chars": 183411,
+    "file": "11224_hobbes.txt"
+  },
+  {
+    "id": 9662,
+    "title": "The Nicomachean Ethics",
+    "author": "Aristotle",
+    "chars": 373254,
+    "file": "9662_aristotle.txt"
+  }
+]

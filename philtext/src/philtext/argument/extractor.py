@@ -58,40 +58,54 @@ class ArgumentExtractor:
         premise_pats = self._rule_indicators.get("premise", [])
         conclusion_pats = self._rule_indicators.get("conclusion", [])
 
-        # First try clause-level splitting within sentences
-        clauses = self._split_clauses(text)
-        premise_clauses: list[str] = []
-        conclusion_clause: str | None = None
+        # Split into sentences first, then find indicator-bearing sentences
+        sentences = self._split_sentences(text)
+        premise_sents: list[str] = []
+        conclusion_sent: str | None = None
 
-        for clause in clauses:
-            is_conclusion = any(
-                re.search(p, clause, re.IGNORECASE) for p in conclusion_pats
+        for sent in sentences:
+            has_conclusion = any(
+                re.search(p, sent, re.IGNORECASE) for p in conclusion_pats
             )
-            is_premise = any(
-                re.search(p, clause, re.IGNORECASE) for p in premise_pats
+            has_premise = any(
+                re.search(p, sent, re.IGNORECASE) for p in premise_pats
             )
-            if is_conclusion:
-                # Strip the indicator word from the conclusion text
-                cleaned = clause.strip()
+
+            if has_conclusion and has_premise:
+                # Same sentence has both: split on conclusion indicator
                 for p in conclusion_pats:
-                    cleaned = re.sub(p, "", cleaned, flags=re.IGNORECASE).strip()
-                cleaned = cleaned.strip(" ,.")
-                conclusion_clause = cleaned if cleaned else clause.strip()
-            elif is_premise:
-                cleaned = clause.strip()
+                    m = re.search(p, sent, re.IGNORECASE)
+                    if m:
+                        before = sent[:m.start()].strip().strip(",;.")
+                        after = sent[m.end():].strip().strip(",;.")
+                        if len(before) > 15:
+                            premise_sents.append(before)
+                        if len(after) > 15:
+                            conclusion_sent = after
+                        break
+            elif has_conclusion:
+                # Strip indicator, keep the substantive content
+                cleaned = sent
+                for p in conclusion_pats:
+                    cleaned = re.sub(p, "", cleaned, flags=re.IGNORECASE)
+                cleaned = cleaned.strip(" ,.;:")
+                if len(cleaned) > 15:
+                    conclusion_sent = cleaned
+            elif has_premise:
+                cleaned = sent
                 for p in premise_pats:
-                    cleaned = re.sub(p, "", cleaned, flags=re.IGNORECASE).strip()
-                cleaned = cleaned.strip(" ,.")
-                if cleaned:
-                    premise_clauses.append(cleaned)
+                    cleaned = re.sub(p, "", cleaned, flags=re.IGNORECASE)
+                cleaned = cleaned.strip(" ,.;:")
+                if len(cleaned) > 15:
+                    premise_sents.append(cleaned)
 
-        if premise_clauses and conclusion_clause:
+        if premise_sents and conclusion_sent:
             premises = [
                 Premise(text=s.strip(), language=self.language)
-                for s in premise_clauses
+                for s in premise_sents
             ]
             conclusion = Conclusion(
-                text=conclusion_clause.strip(), language=self.language
+                text=conclusion_sent.strip(), language=self.language
             )
             return [Argument(
                 premises=premises, conclusion=conclusion,
@@ -99,21 +113,6 @@ class ArgumentExtractor:
                 source_text=text, confidence=0.5,
             )]
         return []
-
-    def _split_clauses(self, text: str) -> list[str]:
-        """Split text into clauses (by commas, semicolons, 'and', and sentence boundaries)."""
-        if self.language in ("ja", "zh"):
-            parts = re.split(r'[、，。；]', text)
-        else:
-            parts = re.split(r'[,;]\s*|\band\b\s+', text)
-            # Also split by sentence boundaries
-            expanded = []
-            for part in parts:
-                expanded.extend(
-                    s.strip() for s in re.split(r'(?<=[.!?])\s+', part) if s.strip()
-                )
-            parts = expanded
-        return [p.strip() for p in parts if p.strip()]
 
     def _llm_extract(self, text: str) -> list[Argument]:
         try:
